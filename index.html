@@ -131,6 +131,84 @@ body {
   border-radius: 10px;
   margin-bottom: 8px;
 }
+/* =========================
+   MOBILE RESPONSIVE FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  /* TITLE */
+  .title {
+    font-size: 28px;
+  }
+
+  /* MAIN LAYOUT STACK */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  /* LEFT COLORS */
+  .left {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .color-item {
+    width: 45%;
+    justify-content: flex-start;
+  }
+
+  /* SCREEN */
+  .screen-box {
+    width: 90%;
+    height: 200px;
+  }
+
+  /* RIGHT PANEL */
+  .right {
+    width: 90%;
+  }
+
+  .right input,
+  .right select,
+  .right button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* SLIDER */
+  #brightnessSlider {
+    width: 90%;
+  }
+
+  /* BOTTOM CARDS */
+  .bottom {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .card-box {
+    width: 100%;
+    height: 60px;
+  }
+
+}
 </style>
 </head>
 
@@ -182,12 +260,11 @@ body {
       <option>720p</option>
       <option>4K</option>
     </select>
-
-    <div>
-      <input type="number" value="1920"> px
-      <input type="number" value="1080"> px
-    </div>
-
+    
+<div style="display:flex; gap:10px;">
+  <input type="number" value="1920" style="flex:1;">
+  <input type="number" value="1080" style="flex:1;">
+</div>
     <button onclick="downloadImage()">Download</button>
 
     <input type="color" onchange="setColor(this.value)">
